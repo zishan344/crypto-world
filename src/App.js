@@ -1,11 +1,18 @@
-import React from 'react'
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+import Header from "./components/Header/Header";
+import Homepage from "./components/Homepage/Homepage";
 
 const App = () => {
   return (
     <div>
-      <h1>Crypto Cafe Starter Template</h1>
+      <Header></Header>
+      <Routes>
+        <Route path="/" element={<Homepage></Homepage>}></Route>
+        <Route path="/home" element={<Homepage></Homepage>}></Route>
+      </Routes>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
